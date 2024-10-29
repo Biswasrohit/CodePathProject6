@@ -1,0 +1,134 @@
+/* General styling */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1d1e22;
+  color: white;
+}
+
+.app {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 200px;
+  background-color: #1f2024;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-box {
+  background-color: #2b2d33;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  flex: 1;
+  margin: 0 10px;
+}
+
+/* Data table styling */
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2b2d33;
+  border-radius: 8px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+/* Search input */
+.search-input,
+.search-filter input {
+  padding: 10px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Character card styling */
+.character-card {
+  background-color: #1f2024;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.character-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Character grid */
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Headings */
+h3 {
+  margin-top: 10px;
+}
+
+/* Filter buttons */
+.filter-buttons {
+  margin-bottom: 20px;
+}
+
+.filter-button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #f0131e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #c1121a; /* Darker red for active state */
+}
+
+.filter-button:hover {
+  background-color: #d41718;
+}
+
+/* Load more button */
+.load-more-btn {
+  padding: 10px 15px;
+  margin-right: 10px;
+  background-color: #f0131e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  background-color: #d41718;
+}
