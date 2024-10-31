@@ -4,6 +4,8 @@ import CharacterCard from "./components/CharacterCard";
 import Sidebar from "./components/Sidebar";
 import SearchFilter from "./components/SearchFilter";
 import Dashboard from "./components/Dashboard";
+import DetailView from "./components/DetailView";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 const App = () => {
@@ -70,8 +72,18 @@ const App = () => {
     <div className="app">
       <Sidebar />
       <div className="main-content">
-        <Dashboard totalCharacters={filteredCharacters.length} />
-        <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Dashboard
+                totalCharacters={filteredCharacters.length}
+                characters={filteredCharacters}
+              />
+            }
+          />
+          <Route path="/character/:id" element={<DetailView />} />
+        </Routes>
 
         {/* Filter Buttons */}
         <div className="filter-buttons">
